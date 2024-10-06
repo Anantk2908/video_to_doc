@@ -9,6 +9,16 @@ The application features a user-friendly Gradio interface where users can input 
 
 ## Installation
 
+1. Ollama
+   Make sure is Ollama is installed.
+   Then in the terminal use the command ```ollama serve``` to start a ollama server
+
+   After cloning the project make a .env
+   Copy the below
+   ```env
+   OLLAMA_BASE_URL = "http://127.0.0.1:11434/"
+   ```
+
 1. Make a python virtual environment
    Use the below command to create a virtual environment
    ```shell
