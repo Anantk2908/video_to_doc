@@ -1,0 +1,44 @@
+```json
+{
+  "title": "Chimpanzee Memory vs. Human Memory",
+  "table_of_contents": [
+    "Introduction",
+    "The Cognitive Tradeoff Hypothesis",
+    "Primate Research Institute",
+    "Memory Test with Ai",
+    "Memory Test with Ayumu",
+    "The Importance of Sharing",
+    "Conservation"
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "content": "Inuyama, Japan is home to Japan's oldest original wooden castle and the Kyoto University's Primate Research Institute. [00:00:00]  A group of chimpanzees at the institute participate in a memory game that reveals surprising insights into their cognitive abilities. [00:00:30]"
+    },
+    {
+      "heading": "The Cognitive Tradeoff Hypothesis",
+      "content": "Humans may be worse at certain memory tasks because of language. [00:01:31]  Language allows humans to communicate about past, present, and future events, tell stories, and engage in abstract thinking. [00:01:51]  This ability may have come at the cost of detailed short-term memory. [00:03:57]  This tradeoff is known as the cognitive tradeoff hypothesis. [00:04:08]"
+    },
+    {
+      "heading": "Primate Research Institute",
+      "content": "Professor Tetsuro Matsuzawa leads research at the Primate Research Institute. [00:04:23]  The institute, founded in 1967, houses over 60 species and nearly 1,000 primates. [00:04:37]  Dr. Matsuzawa has studied non-human primates for over 40 years. [00:05:33]  The chimpanzee habitat includes Skylab, an open-air laboratory where chimpanzees participate in cognitive tasks. [00:05:48]"
+    },
+    {
+      "heading": "Memory Test with Ai",
+      "content": "Ai, an older chimpanzee, participates in a memory test alongside Michael. [00:12:05]  The test involves remembering the location of numbers after they are covered by squares. [00:12:52]  Ai's performance may be affected by Michael's presence. [00:15:25]"
+    },
+    {
+      "heading": "Memory Test with Ayumu",
+      "content": "Ayumu, Matsuzawa's best pupil, is unavailable for the test due to his interest in other activities. [00:15:49]  Michael attempts the test with nine numbers, matching Ayumu's level. [00:16:16]  Michael finds the test at Ayumu's speed impossible. [00:18:34]"
+    },
+    {
+      "heading": "The Importance of Sharing",
+      "content": "Dr. Matsuzawa emphasizes the importance of sharing as a unique human trait. [00:11:00]  He believes that understanding chimpanzee minds helps understand the unique features of the human mind. [00:11:00]"
+    },
+    {
+      "heading": "Conservation",
+      "content": "Chimpanzees are endangered, and their study is crucial for understanding human evolution. [00:20:27]  Dr. Matsuzawa stresses the importance of preserving chimpanzees. [00:20:27]"
+    }
+  ]
+}
+```
