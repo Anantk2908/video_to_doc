@@ -57,7 +57,7 @@ The summary document can be downloaded directly from the UI.
    - **Channel**: Vsauce  
 
    #### Sample Summary Document:  
-   [Download Summary Document](https://github.com/yourusername/yourrepo/raw/main/samples/cognitive_tradeoff_summary.docx)
+   [Download Summary Document](https://github.com/Anantk2908/video_to_doc/raw/main/assets/Chimpanzee_Memory_vs_Human_Language.docx)
 
 ---
 
