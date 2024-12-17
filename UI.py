@@ -32,7 +32,7 @@ def transcribe_audio(path_to_audio="Audio.mp3"):
     print("Transcription complete.")
     return data  
 
-def generate_json_from_transcript(transcript_data):
+def generate_json_from_transcript(transcript_data, api_key):
     prompt = (
     "You are an expert in creating structured JSON responses from video transcripts to be converted into detailed Word documents. "
     "Format the JSON to include a 'title' field, followed by a 'table_of_contents' field as an array listing the main sections. "
@@ -57,7 +57,7 @@ def generate_json_from_transcript(transcript_data):
     f"Video Transcript: {transcript_data}\n"
     "JSON Output:"
     )
-    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+    genai.configure(api_key=api_key)
     model = genai.GenerativeModel(model_name="gemini-1.5-pro")
     response = model.generate_content(prompt)
     cleaned_content = re.sub(r"```json\s*|\s*```", "", response.text, flags=re.DOTALL).strip()
@@ -79,25 +79,29 @@ def generate_word_document(json_data):
     print(f"Document '{doc_title}' created successfully!")
     return doc_title  
 
-def process_youtube_to_document_gradio(yt_url):
+def process_youtube_to_document_gradio(yt_url, api_key):
     audio_file = download_audio(yt_url)
     transcript = transcribe_audio(audio_file)
-    json_content = generate_json_from_transcript(transcript)
+    json_content = generate_json_from_transcript(transcript, api_key)
     document_name = generate_word_document(json_content)
     return transcript, json_content, document_name
 
-def run_script(yt_url):
-    transcript, json_content, document_name = process_youtube_to_document_gradio(yt_url)
+def run_script(yt_url, api_key):
+    transcript, json_content, document_name = process_youtube_to_document_gradio(yt_url, api_key)
     with open(document_name, "rb") as f:
         doc_file = f.read()
     return transcript, json_content, (document_name, doc_file)
 
 with gr.Blocks() as demo:
-    gr.Markdown("# YouTube to Word Document Converter")
-    gr.Markdown("Enter a YouTube URL, and this tool will generate a Word document from the video transcript.")
+    gr.Markdown("""
+        # 🎥 YouTube Video Summarizer 🎥
+        Enter a YouTube link below to generate a detailed summary document with timestamps. The generated document is ready for easy reference!
+        """)
+    gr.Markdown("Enter a YouTube URL and your API key. This tool will generate a Word document from the video transcript.")
     
     with gr.Row():
         yt_url_input = gr.Textbox(label="YouTube URL", placeholder="Enter the YouTube video URL here")
+        api_key_input = gr.Textbox(label="API Key", placeholder="Enter your API key", type="password")
         submit_button = gr.Button("Process Video")
     
     transcript_output = gr.Textbox(label="Transcript", lines=15, interactive=False)
@@ -106,7 +110,7 @@ with gr.Blocks() as demo:
     
     submit_button.click(
         fn=run_script, 
-        inputs=[yt_url_input], 
+        inputs=[yt_url_input, api_key_input], 
         outputs=[transcript_output, json_output, doc_download]
     )
 
